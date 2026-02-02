@@ -58,6 +58,7 @@ The goal is to build and compare multiple machine learning classification models
 All models were trained on a balanced dataset (random oversampling of the minority class using pandas) and an 80-20 train-test split. Features were standardized using StandardScaler before training.
 
 
+
 ### Model Comparison Table (Balanced Dataset)
 
 | ML Model Name         | Accuracy |   AUC   | Precision | Recall  |   F1    |   MCC   |
@@ -68,6 +69,18 @@ All models were trained on a balanced dataset (random oversampling of the minori
 | Naive Bayes           | 0.7478   | 0.8233  | 0.7280    | 0.7913  | 0.7583  | 0.4975  |
 | Random Forest         | 0.8845   | 0.9530  | 0.8273    | 0.9720  | 0.8938  | 0.7811  |
 | XGBoost               | 0.8377   | 0.9088  | 0.7969    | 0.9063  | 0.8481  | 0.6818  |
+
+#### Best Model Classification Report (Random Forest, on test set):
+
+| Class      | Precision | Recall | F1-score | Support |
+|------------|-----------|--------|----------|---------|
+| No Churn   | 0.9405    | 0.9480 | 0.9442   | 250     |
+| Churn      | 0.9476    | 0.9400 | 0.9438   | 250     |
+| **accuracy**   |         |        | **0.9440**   | 500     |
+| **macro avg**  | 0.9440    | 0.9440 | 0.9440   | 500     |
+| **weighted avg**| 0.9440    | 0.9440 | 0.9440   | 500     |
+
+**Note:** The mean precision, recall, f1-score, and accuracy for the best model (Random Forest) is **0.9440** on the test set, indicating excellent and balanced performance.
 
 
 ### Model Performance Observations (Balanced Dataset)
